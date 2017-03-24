@@ -5,7 +5,7 @@
 const express = require('express')
 const scragram = require('scragram')
 const bodyParser = require('body-parser')
-
+const cors = require('cors')
 
 /*
   Constants
@@ -13,6 +13,8 @@ const bodyParser = require('body-parser')
 const app = express()
 const router = express.Router()
 const port = process.env.PORT || 8080
+
+app.use(cors())
 
 router.use(function(req, res, next){
   next()
